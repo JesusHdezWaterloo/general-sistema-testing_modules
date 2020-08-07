@@ -1,4 +1,4 @@
-package com.jhw.clean.example.application.dashboard;
+package com.jhw.testingmodules.gestion.application.dashboard;
 
 import com.jhw.personalization.core.domain.Personalization;
 import com.jhw.personalization.services.PersonalizationHandler;

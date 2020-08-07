@@ -1,14 +1,14 @@
-package com.jhw.clean.example.application;
+package com.jhw.testingmodules.gestion.application;
 
 import com.clean.core.app.services.Notification;
 import com.clean.core.app.services.NotificationsGeneralType;
 import com.clean.swing.app.DefaultSwingApplication;
 import static com.clean.swing.app.RootView.LOGIN_NAME;
-import com.jhw.clean.example.application.services.ExceptionServiceImplementation;
-import com.jhw.clean.example.application.services.NavigationServiceImplementation;
-import com.jhw.clean.example.application.services.NotificationServiceImplementation;
-import com.jhw.clean.example.application.services.ResourceServiceImplementation;
-import com.jhw.clean.example.application.services.LoginServiceImplementation;
+import com.jhw.testingmodules.gestion.application.services.ExceptionServiceImplementation;
+import com.jhw.testingmodules.gestion.application.services.NavigationServiceImplementation;
+import com.jhw.testingmodules.gestion.application.services.NotificationServiceImplementation;
+import com.jhw.testingmodules.gestion.application.services.ResourceServiceImplementation;
+import com.jhw.testingmodules.gestion.application.services.LoginServiceImplementation;
 import com.jhw.licence.services.LicenceHandler;
 import com.jhw.swing.ui.MaterialLookAndFeel;
 import javax.swing.UIManager;

@@ -1,6 +1,7 @@
-package com.jhw.clean.example.application;
+package com.jhw.testingmodules.gestion.application;
 
 import com.jhw.company.ui.module.CompanySwingModule;
+import com.jhw.gestion.modules.contabilidad.ui.module.ContabilidadSwingModule;
 import com.jhw.modules.tec.TecSwingModule;
 import com.jhw.swing.bundles.loading.LoadingProcess;
 import com.jhw.swing.bundles.loading.LoadingWorker;
@@ -41,7 +42,9 @@ public class Main {
                         new LicenceSwingModule(),
                         new CompanySwingModule(),
                         
-                        new MySQLSwingModule()
+                        new MySQLSwingModule(),
+                        
+                        ContabilidadSwingModule.init()
                 );
                 return null;
             }

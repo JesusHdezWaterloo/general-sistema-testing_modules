@@ -7,7 +7,7 @@ plugins {
 
 group = 'com.jhw.clean.example'
 
-mainClassName = 'com.jhw.clean.example.application.Main'
+mainClassName = 'com.jhw.testingmodules.gestion.application.Main'
 
 
 repositories {
@@ -34,6 +34,7 @@ dependencies {
     implementation project(':derivable-icons')
     implementation project(':material-standards')
     implementation project(':material-personalization')
+    implementation project(':material-chart')
     implementation project(':material-swing')
     implementation project(':material-notification')
     implementation project(':material-model')
@@ -46,6 +47,9 @@ dependencies {
     implementation project(':module-licence')
     implementation project(':module-company')
     implementation project(':module-mysql')
+    
+    //modulos de gestion
+    implementation project(':module-contabilidad')
     
     compile group: 'mysql', name: 'mysql-connector-java', version: '8.0.17'
     
