@@ -50,6 +50,7 @@ dependencies {
     
     //modulos de gestion
     implementation project(':module-contabilidad')
+    implementation project(':module-gasto')
     
     compile group: 'mysql', name: 'mysql-connector-java', version: '8.0.17'
     

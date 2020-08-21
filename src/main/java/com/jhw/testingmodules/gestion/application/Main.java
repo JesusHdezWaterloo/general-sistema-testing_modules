@@ -2,6 +2,7 @@ package com.jhw.testingmodules.gestion.application;
 
 import com.jhw.company.ui.module.CompanySwingModule;
 import com.jhw.gestion.modules.contabilidad.ui.module.ContabilidadSwingModule;
+import com.jhw.gestion.modules.gasto.ui.module.GastoSwingModule;
 import com.jhw.modules.tec.TecSwingModule;
 import com.jhw.swing.bundles.loading.LoadingProcess;
 import com.jhw.swing.bundles.loading.LoadingWorker;
@@ -35,16 +36,18 @@ public class Main {
             public Void process() throws Exception {
                 app.run();
                 app.registerModule(
-                        new DefaultConfigSwingModule(),
-                        new TecSwingModule(),
-                        new CalcSwingModule(),
-                        new BugSwingModule(),
-                        new LicenceSwingModule(),
-                        new CompanySwingModule(),
+                        BugSwingModule.init(),
+                        CalcSwingModule.init(),
+                        DefaultConfigSwingModule.init(),
+                        TecSwingModule.init(),
+                        LicenceSwingModule.init(),
+                        CompanySwingModule.init(),
                         
-                        new MySQLSwingModule(),
+                        MySQLSwingModule.init(),
                         
-                        ContabilidadSwingModule.init()
+                        ContabilidadSwingModule.init(),
+                        GastoSwingModule.init()
+                        
                 );
                 return null;
             }
@@ -52,7 +55,7 @@ public class Main {
             @Override
             public void completed(Void result) throws Exception {
                 System.out.println("Iniciando el sistema....");
-                //app.registerModule(new ConsoleSwingModule());
+                //app.registerModule(ConsoleSwingModule.init());
                 app.show();
             }
 
