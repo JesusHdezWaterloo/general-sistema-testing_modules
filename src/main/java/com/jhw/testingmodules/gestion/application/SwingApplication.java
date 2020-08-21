@@ -45,7 +45,6 @@ public class SwingApplication extends DefaultSwingApplication {
 
     @Override
     public void closeApplication() {
-        Notification.showConfirmDialog(NotificationsGeneralType.CONFIRM_ERROR, "CERRANDO LA APP");
     }
 
 }
