@@ -4,7 +4,6 @@ import com.clean.swing.app.DefaultRootView;
 import com.jhw.testingmodules.gestion.application.dashboard.DashBoardFormateer;
 import com.jhw.swing.material.components.dashboard.taskpane.expanded.DashBoardExtends;
 import com.jhw.swing.material.components.login.DefaultLoginPanel;
-import com.jhw.swing.material.standards.MaterialIcons;
 import com.jhw.utils.interfaces.Update;
 import java.awt.Component;
 import java.beans.PropertyChangeListener;
@@ -20,7 +19,7 @@ public class RootViewFrame extends DefaultRootView {
         startLogin();
         startDashboard();
 
-        if (true) {//TODO
+        if (false) {//TODO
             navigateTo(LOGIN_NAME);
         } else {
             navigateTo(DASH_NAME);
