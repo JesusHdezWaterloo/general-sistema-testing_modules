@@ -25,6 +25,7 @@ project(':module-company').projectDir = "E:\\Trabajos\\Projects\\GIT Projects Gr
 project(':module-mysql').projectDir = "E:\\Trabajos\\Projects\\GIT Projects Gradle\\Modulos Utils\\MySQL" as File
 
 
-include ':module-contabilidad', 'module-gasto'
+include ':module-contabilidad', 'module-gasto', 'module-nomina'
 project(':module-contabilidad').projectDir = "E:\\Trabajos\\Projects\\GIT Projects Gradle\\Modulos Gestion\\Contabilidad Empresarial" as File
 project(':module-gasto').projectDir = "E:\\Trabajos\\Projects\\GIT Projects Gradle\\Modulos Gestion\\Gastos Administrativos" as File
+project(':module-nomina').projectDir = "E:\\Trabajos\\Projects\\GIT Projects Gradle\\Modulos Gestion\\Nomina" as File

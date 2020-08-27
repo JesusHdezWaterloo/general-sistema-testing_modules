@@ -13,6 +13,7 @@ import javax.swing.JOptionPane;
 import com.jhw.modules.default_config.DefaultConfigSwingModule;
 import com.jhw.licence.ui.module.LicenceSwingModule;
 import com.jhw.mysql.ui.module.MySQLSwingModule;
+import com.jhw.gestion.modules.nomina.ui.module.NominaSwingModule;
 
 /**
  *
@@ -46,7 +47,8 @@ public class Main {
                         MySQLSwingModule.init(),
                         
                         ContabilidadSwingModule.init(),
-                        GastoSwingModule.init()
+                        GastoSwingModule.init(),
+                        NominaSwingModule.init()
                         
                 );
                 return null;
