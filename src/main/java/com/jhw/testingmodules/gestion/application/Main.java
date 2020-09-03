@@ -14,6 +14,7 @@ import com.jhw.modules.default_config.DefaultConfigSwingModule;
 import com.jhw.licence.ui.module.LicenceSwingModule;
 import com.jhw.mysql.ui.module.MySQLSwingModule;
 import com.jhw.gestion.modules.nomina.ui.module.NominaSwingModule;
+import com.jhw.personalization.ui.module.PersonalizationSwingModule;
 
 /**
  *
@@ -37,9 +38,10 @@ public class Main {
             public Void process() throws Exception {
                 app.run();
                 app.registerModule(
+                        PersonalizationSwingModule.init(),
+                        DefaultConfigSwingModule.init(),
                         BugSwingModule.init(),
                         CalcSwingModule.init(),
-                        DefaultConfigSwingModule.init(),
                         TecSwingModule.init(),
                         LicenceSwingModule.init(),
                         CompanySwingModule.init(),

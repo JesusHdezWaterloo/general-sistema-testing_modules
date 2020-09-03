@@ -10,7 +10,14 @@ import com.jhw.testingmodules.gestion.application.services.NotificationServiceIm
 import com.jhw.testingmodules.gestion.application.services.ResourceServiceImplementation;
 import com.jhw.testingmodules.gestion.application.services.LoginServiceImplementation;
 import com.jhw.licence.services.LicenceHandler;
+import com.jhw.personalization.services.PersonalizationHandler;
+import com.jhw.swing.models.utils.PersonalizationModel;
 import com.jhw.swing.ui.MaterialLookAndFeel;
+import com.jhw.utils.file.FILE;
+import java.io.File;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.UIManager;
 
 /**
@@ -32,6 +39,9 @@ public class SwingApplication extends DefaultSwingApplication {
         NavigationServiceImplementation.init();
         ResourceServiceImplementation.init();
         LoginServiceImplementation.init();
+
+        //creada la carpeta al iniciar el sistema para que al final cuando se cierre no de error xq no existe
+        new File(PersonalizationHandler.getString(PersonalizationModel.KEY_TEMP_FOLDER)).mkdirs();
     }
 
     @Override
@@ -45,6 +55,14 @@ public class SwingApplication extends DefaultSwingApplication {
 
     @Override
     public void closeApplication() {
+        try {
+            boolean deleted = FILE.delete(PersonalizationHandler.getString(PersonalizationModel.KEY_TEMP_FOLDER));
+            if (deleted) {
+                return;
+            }
+        } catch (Exception ex) {
+        }
+        Notification.showConfirmDialog(NotificationsGeneralType.CONFIRM_ERROR, "Error eliminando la carpeta temporal. Esto NO afecta el sistema,\npero con el tiempo puede que ocupe mucho espacio innecesariamente.");
     }
 
 }
