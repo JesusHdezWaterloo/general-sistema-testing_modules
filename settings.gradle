@@ -29,3 +29,6 @@ include ':module-contabilidad', 'module-gasto', 'module-nomina'
 project(':module-contabilidad').projectDir = "E:\\Trabajos\\Projects\\GIT Projects Gradle\\Modulos Gestion\\Contabilidad Empresarial" as File
 project(':module-gasto').projectDir = "E:\\Trabajos\\Projects\\GIT Projects Gradle\\Modulos Gestion\\Gastos Administrativos" as File
 project(':module-nomina').projectDir = "E:\\Trabajos\\Projects\\GIT Projects Gradle\\Modulos Gestion\\Nomina" as File
+
+include 'module-export'
+project(':module-export').projectDir = "E:\\Trabajos\\Projects\\GIT Projects Gradle\\Modulos Utils\\Export" as File
