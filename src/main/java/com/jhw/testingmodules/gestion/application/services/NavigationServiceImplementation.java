@@ -1,8 +1,8 @@
-package com.jhw.clean.example.application.services;
+package com.jhw.testingmodules.gestion.application.services;
 
 import com.clean.core.app.services.Navigation;
 import com.clean.core.app.services.NavigationService;
-import static com.jhw.clean.example.application.Main.app;
+import static com.jhw.testingmodules.gestion.application.Main.app;
 
 /**
  *

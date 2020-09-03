@@ -1,4 +1,4 @@
-package com.jhw.clean.example.application.services;
+package com.jhw.testingmodules.gestion.application.services;
 
 import com.clean.core.domain.services.Resource;
 import com.clean.core.domain.services.ResourceBundleUtils;

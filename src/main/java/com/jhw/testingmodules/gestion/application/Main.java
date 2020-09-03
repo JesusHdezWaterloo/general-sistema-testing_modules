@@ -1,6 +1,8 @@
-package com.jhw.clean.example.application;
+package com.jhw.testingmodules.gestion.application;
 
 import com.jhw.company.ui.module.CompanySwingModule;
+import com.jhw.gestion.modules.contabilidad.ui.module.ContabilidadSwingModule;
+import com.jhw.gestion.modules.gasto.ui.module.GastoSwingModule;
 import com.jhw.modules.tec.TecSwingModule;
 import com.jhw.swing.bundles.loading.LoadingProcess;
 import com.jhw.swing.bundles.loading.LoadingWorker;
@@ -11,6 +13,8 @@ import javax.swing.JOptionPane;
 import com.jhw.modules.default_config.DefaultConfigSwingModule;
 import com.jhw.licence.ui.module.LicenceSwingModule;
 import com.jhw.mysql.ui.module.MySQLSwingModule;
+import com.jhw.gestion.modules.nomina.ui.module.NominaSwingModule;
+import com.jhw.personalization.ui.module.PersonalizationSwingModule;
 
 /**
  *
@@ -34,14 +38,20 @@ public class Main {
             public Void process() throws Exception {
                 app.run();
                 app.registerModule(
-                        new DefaultConfigSwingModule(),
-                        new TecSwingModule(),
-                        new CalcSwingModule(),
-                        new BugSwingModule(),
-                        new LicenceSwingModule(),
-                        new CompanySwingModule(),
+                        PersonalizationSwingModule.init(),
+                        DefaultConfigSwingModule.init(),
+                        BugSwingModule.init(),
+                        CalcSwingModule.init(),
+                        TecSwingModule.init(),
+                        LicenceSwingModule.init(),
+                        CompanySwingModule.init(),
                         
-                        new MySQLSwingModule()
+                        MySQLSwingModule.init(),
+                        
+                        ContabilidadSwingModule.init(),
+                        GastoSwingModule.init(),
+                        NominaSwingModule.init()
+                        
                 );
                 return null;
             }
@@ -49,7 +59,7 @@ public class Main {
             @Override
             public void completed(Void result) throws Exception {
                 System.out.println("Iniciando el sistema....");
-                //app.registerModule(new ConsoleSwingModule());
+                //app.registerModule(ConsoleSwingModule.init());
                 app.show();
             }
 
