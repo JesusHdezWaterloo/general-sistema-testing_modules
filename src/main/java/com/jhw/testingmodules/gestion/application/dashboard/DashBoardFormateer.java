@@ -2,6 +2,7 @@ package com.jhw.testingmodules.gestion.application.dashboard;
 
 import com.jhw.personalization.core.domain.Personalization;
 import com.jhw.personalization.services.PersonalizationHandler;
+import com.jhw.swing.material.components.container.panel._PanelGradient;
 import com.jhw.swing.material.components.dashboard.taskpane.expanded.DashBoardExtends;
 import com.jhw.swing.material.components.dashboard.taskpane.expanded.DownPanel;
 import com.jhw.swing.material.components.dashboard.taskpane.expanded.UpPanel;
@@ -59,9 +60,9 @@ public class DashBoardFormateer {
     };
 
     public static Consumer<UpPanel> upPanelFormatter = (UpPanel up) -> {
-        up.getBackgroundPanel().setPrimaryColor(SECUNDARY_0);
-        up.getBackgroundPanel().setSecundaryColor(PersonalizationHandler.getColor(Personalization.KEY_COLOR_SECUNDARY));
-        up.getBackgroundPanel().setGradient(GradientEnum.VERTICAL_3_4);
+        ((_PanelGradient) up.getBackgroundPanel()).setPrimaryColor(SECUNDARY_0);//TODO: estandar para gradient
+        ((_PanelGradient) up.getBackgroundPanel()).setSecundaryColor(PersonalizationHandler.getColor(Personalization.KEY_COLOR_SECUNDARY));
+        ((_PanelGradient) up.getBackgroundPanel()).setGradient(GradientEnum.VERTICAL_3_4);
     };
 
     public static Consumer<DownPanel> downPanelFormatter = (DownPanel down) -> {

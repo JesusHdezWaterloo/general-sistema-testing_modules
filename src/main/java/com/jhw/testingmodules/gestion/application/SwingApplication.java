@@ -4,6 +4,8 @@ import com.clean.core.app.services.Notification;
 import com.clean.core.app.services.NotificationsGeneralType;
 import com.clean.swing.app.DefaultSwingApplication;
 import static com.clean.swing.app.RootView.LOGIN_NAME;
+import com.jhw.files.utils.FILE;
+import com.jhw.files.utils.PersonalizationFiles;
 import com.jhw.testingmodules.gestion.application.services.ExceptionServiceImplementation;
 import com.jhw.testingmodules.gestion.application.services.NavigationServiceImplementation;
 import com.jhw.testingmodules.gestion.application.services.NotificationServiceImplementation;
@@ -13,7 +15,6 @@ import com.jhw.licence.services.LicenceHandler;
 import com.jhw.personalization.services.PersonalizationHandler;
 import com.jhw.swing.models.utils.PersonalizationModel;
 import com.jhw.swing.ui.MaterialLookAndFeel;
-import com.jhw.utils.file.FILE;
 import java.io.File;
 import java.io.IOException;
 import java.util.logging.Level;
@@ -41,7 +42,7 @@ public class SwingApplication extends DefaultSwingApplication {
         LoginServiceImplementation.init();
 
         //creada la carpeta al iniciar el sistema para que al final cuando se cierre no de error xq no existe
-        new File(PersonalizationHandler.getString(PersonalizationModel.KEY_TEMP_FOLDER)).mkdirs();
+        new File(PersonalizationHandler.getString(PersonalizationFiles.KEY_TEMP_FOLDER)).mkdirs();
     }
 
     @Override
@@ -56,7 +57,7 @@ public class SwingApplication extends DefaultSwingApplication {
     @Override
     public void closeApplication() {
         try {
-            boolean deleted = FILE.delete(PersonalizationHandler.getString(PersonalizationModel.KEY_TEMP_FOLDER));
+            boolean deleted = FILE.delete(PersonalizationHandler.getString(PersonalizationFiles.KEY_TEMP_FOLDER));
             if (deleted) {
                 return;
             }
