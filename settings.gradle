@@ -30,5 +30,6 @@ project(':module-contabilidad').projectDir = "E:\\Trabajos\\Projects\\GIT Projec
 project(':module-gasto').projectDir = "E:\\Trabajos\\Projects\\GIT Projects Gradle\\Modulos Gestion\\Gastos Administrativos" as File
 project(':module-nomina').projectDir = "E:\\Trabajos\\Projects\\GIT Projects Gradle\\Modulos Gestion\\Nomina" as File
 
-include 'module-export'
+include 'module-export', 'module-files'
 project(':module-export').projectDir = "E:\\Trabajos\\Projects\\GIT Projects Gradle\\Modulos Utils\\Export" as File
+project(':module-files').projectDir = "E:\\Trabajos\\Projects\\GIT Projects Gradle\\Modulos Utils\\Files" as File
