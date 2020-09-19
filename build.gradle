@@ -38,6 +38,7 @@ dependencies {
     implementation project(':material-swing')
     implementation project(':material-notification')
     implementation project(':material-model')
+    implementation project(':material-swing-preparated')
     
     implementation project(':module-console')
     implementation project(':module-tec')
@@ -52,6 +53,9 @@ dependencies {
     implementation project(':module-contabilidad')
     implementation project(':module-gasto')
     implementation project(':module-nomina')
+    
+    //modulos admin
+    implementation project(':module-kanban')
     
     implementation project(':module-export')
     implementation project(':module-files')
