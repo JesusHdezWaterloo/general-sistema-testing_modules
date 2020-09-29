@@ -5,7 +5,7 @@ plugins {
     id 'application'
 }
 
-group = 'com.jhw.clean.example'
+group = 'com.jhw.testingmodules.gestion'
 
 mainClassName = 'com.jhw.testingmodules.gestion.application.Main'
 
@@ -73,9 +73,27 @@ dependencies {
 
 launch4j {
     headerType = 'gui'
-    outfile = 'CleanExample.exe'
-    mainClassName = 'com.jhw.clean.example.application.Main'
-    productName = 'CleanExample'
+    outfile = 'TestModulosGestion.exe'
+    mainClassName = 'com.jhw.testingmodules.gestion.application.Main'
+    productName = 'TestModulosGestion'
     bundledJrePath = 'jre'
     icon = "${projectDir}/src/main/resources/icon.ico" //ponerlo de ultimo
 }
+
+task deploy(type: Copy){
+    def deployFolder = "${projectDir}/!deploy"
+    doFirst{
+        delete deployFolder
+    }
+    from "${projectDir}/build/launch4j"//carpeta del launch4j
+    into deployFolder
+}
+task copyJRE(type: Copy){
+    def deployFolder = "${projectDir}/!deploy"
+    def jre_home = "${projectDir}/jre"
+    from jre_home
+    into deployFolder + "/" + launch4j.getAt("bundledJrePath")
+}
+createExe.finalizedBy(deploy)
+deploy.finalizedBy(copyJRE)
+//build.finalizedBy(createExe)
