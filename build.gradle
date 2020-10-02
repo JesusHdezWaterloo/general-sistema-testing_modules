@@ -5,7 +5,7 @@ plugins {
     id 'application'
 }
 
-group = 'com.jhw.clean.example'
+group = 'com.jhw.testingmodules.gestion'
 
 mainClassName = 'com.jhw.testingmodules.gestion.application.Main'
 
@@ -27,34 +27,38 @@ allprojects{
 dependencies {
     testImplementation 'junit:junit:4.13'
 
-    implementation project(':utils')
-    implementation project(':clean-core')
+    implementation project(':utils-core')
+    
+    implementation project(':clean-core-full')
     implementation project(':clean-swing')
     
-    implementation project(':derivable-icons')
-    implementation project(':material-standards')
-    implementation project(':material-personalization')
-    implementation project(':material-chart')
-    implementation project(':material-swing')
-    implementation project(':material-notification')
-    implementation project(':material-model')
+    implementation project(':swing-derivable_icons')
+
+    implementation project(':swing-material-standards')
+    implementation project(':swing-material-core')
+    implementation project(':swing-material-prepared')
+    implementation project(':swing-material-notifications')
+    implementation project(':swing-material-chart')
+    implementation project(':swing-material-model')
     
-    implementation project(':module-console')
-    implementation project(':module-tec')
-    implementation project(':module-bug')
-    implementation project(':module-calc')
-    implementation project(':module-default-config')
-    implementation project(':module-licence')
-    implementation project(':module-company')
-    implementation project(':module-mysql')
+    implementation project(':module-util-personalization')
+    implementation project(':module-util-default_configuration')
+    implementation project(':module-util-licence')
+    implementation project(':module-util-my_sql')
     
-    //modulos de gestion
-    implementation project(':module-contabilidad')
-    implementation project(':module-gasto')
-    implementation project(':module-nomina')
+    implementation project(':utils-export')
+    implementation project(':utils-files')
     
-    implementation project(':module-export')
-    implementation project(':module-files')
+    implementation project(':module-gestion-contabilidad_empresarial')
+    implementation project(':module-admin-kanban')
+    implementation project(':module-gestion-gastos_administrativos')
+    implementation project(':module-gestion-nomina')
+    
+    implementation project(':module-util-bug')
+    implementation project(':module-util-calc')
+    implementation project(':module-util-company')
+    implementation project(':module-util-console')
+    implementation project(':module-util-tec')
     
     compile group: 'mysql', name: 'mysql-connector-java', version: '8.0.17'
     
@@ -69,9 +73,27 @@ dependencies {
 
 launch4j {
     headerType = 'gui'
-    outfile = 'CleanExample.exe'
-    mainClassName = 'com.jhw.clean.example.application.Main'
-    productName = 'CleanExample'
+    outfile = 'TestModulosGestion.exe'
+    mainClassName = 'com.jhw.testingmodules.gestion.application.Main'
+    productName = 'TestModulosGestion'
     bundledJrePath = 'jre'
     icon = "${projectDir}/src/main/resources/icon.ico" //ponerlo de ultimo
 }
+
+task deploy(type: Copy){
+    def deployFolder = "${projectDir}/!deploy"
+    doFirst{
+        delete deployFolder
+    }
+    from "${projectDir}/build/launch4j"//carpeta del launch4j
+    into deployFolder
+}
+task copyJRE(type: Copy){
+    def deployFolder = "${projectDir}/!deploy"
+    def jre_home = "${projectDir}/jre"
+    from jre_home
+    into deployFolder + "/" + launch4j.getAt("bundledJrePath")
+}
+createExe.finalizedBy(deploy)
+deploy.finalizedBy(copyJRE)
+//build.finalizedBy(createExe)

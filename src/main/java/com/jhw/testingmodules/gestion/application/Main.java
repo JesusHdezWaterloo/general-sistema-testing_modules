@@ -1,6 +1,7 @@
 package com.jhw.testingmodules.gestion.application;
 
 import com.jhw.company.ui.module.CompanySwingModule;
+import com.jhw.gestion.modules.admin.ui.module.KanbanSwingModule;
 import com.jhw.gestion.modules.contabilidad.ui.module.ContabilidadSwingModule;
 import com.jhw.gestion.modules.gasto.ui.module.GastoSwingModule;
 import com.jhw.modules.tec.TecSwingModule;
@@ -15,6 +16,9 @@ import com.jhw.licence.ui.module.LicenceSwingModule;
 import com.jhw.mysql.ui.module.MySQLSwingModule;
 import com.jhw.gestion.modules.nomina.ui.module.NominaSwingModule;
 import com.jhw.personalization.ui.module.PersonalizationSwingModule;
+import com.jhw.swing.material.components.splashScreen.SplashScreen;
+import com.jhw.swing.material.standards.MaterialIcons;
+import javax.swing.JPanel;
 
 /**
  *
@@ -50,7 +54,9 @@ public class Main {
                         
                         ContabilidadSwingModule.init(),
                         GastoSwingModule.init(),
-                        NominaSwingModule.init()
+                        NominaSwingModule.init(),
+                                                
+                        KanbanSwingModule.init()
                         
                 );
                 return null;
