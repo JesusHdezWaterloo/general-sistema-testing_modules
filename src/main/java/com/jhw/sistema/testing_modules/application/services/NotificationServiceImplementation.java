@@ -1,4 +1,4 @@
-package com.jhw.testingmodules.gestion.application.services;
+package com.jhw.sistema.testing_modules.application.services;
 
 import com.clean.core.app.services.Notification;
 import com.clean.core.app.services.NotificationServiceFunctional;

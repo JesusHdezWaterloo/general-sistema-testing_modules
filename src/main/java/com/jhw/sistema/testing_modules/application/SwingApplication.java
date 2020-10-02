@@ -1,18 +1,18 @@
-package com.jhw.testingmodules.gestion.application;
+package com.jhw.sistema.testing_modules.application;
 
 import com.clean.core.app.services.Notification;
 import com.clean.core.app.services.NotificationsGeneralType;
 import com.clean.swing.app.DefaultSwingApplication;
 import static com.clean.swing.app.RootView.LOGIN_NAME;
-import com.jhw.files.utils.FILE;
-import com.jhw.files.utils.PersonalizationFiles;
-import com.jhw.testingmodules.gestion.application.services.ExceptionServiceImplementation;
-import com.jhw.testingmodules.gestion.application.services.NavigationServiceImplementation;
-import com.jhw.testingmodules.gestion.application.services.NotificationServiceImplementation;
-import com.jhw.testingmodules.gestion.application.services.ResourceServiceImplementation;
-import com.jhw.testingmodules.gestion.application.services.LoginServiceImplementation;
-import com.jhw.licence.services.LicenceHandler;
-import com.jhw.personalization.services.PersonalizationHandler;
+import com.jhw.utils.file.FILE;
+import com.jhw.utils.file.PersonalizationFiles;
+import com.jhw.sistema.testing_modules.application.services.ExceptionServiceImplementation;
+import com.jhw.sistema.testing_modules.application.services.NavigationServiceImplementation;
+import com.jhw.sistema.testing_modules.application.services.NotificationServiceImplementation;
+import com.jhw.sistema.testing_modules.application.services.ResourceServiceImplementation;
+import com.jhw.sistema.testing_modules.application.services.LoginServiceImplementation;
+import com.jhw.module.util.licence.services.LicenceHandler;
+import com.jhw.module.util.personalization.services.PersonalizationHandler;
 import com.jhw.swing.models.utils.PersonalizationModel;
 import com.jhw.swing.ui.MaterialLookAndFeel;
 import java.io.File;
