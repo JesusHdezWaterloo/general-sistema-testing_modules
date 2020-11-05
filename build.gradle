@@ -48,11 +48,10 @@ dependencies {
     
     implementation project(':utils-export')
     implementation project(':utils-files')
+    implementation project(':utils-spring')
     
-    implementation project(':module-gestion-contabilidad_empresarial')
-    implementation project(':module-admin-kanban')
-    implementation project(':module-gestion-gastos_administrativos')
-    implementation project(':module-gestion-nomina')
+    implementation project(':module-gestion-contabilidad_empresarial-client')    
+    implementation project(':module-gestion-contabilidad_empresarial-standard')
     
     implementation project(':module-util-bug')
     implementation project(':module-util-calc')

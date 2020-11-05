@@ -48,17 +48,14 @@ project(':utils-export').projectDir = "E:\\Trabajos\\Projects\\GIT Projects Grad
 include ':utils-files'
 project(':utils-files').projectDir = "E:\\Trabajos\\Projects\\GIT Projects Gradle\\utils-files" as File
 
-include ':module-gestion-contabilidad_empresarial'
-project(':module-gestion-contabilidad_empresarial').projectDir = "E:\\Trabajos\\Projects\\GIT Projects Gradle\\module-gestion-contabilidad_empresarial" as File
+include ':utils-spring'
+project(':utils-spring').projectDir = "E:\\Trabajos\\Projects\\GIT Projects Gradle\\utils-spring" as File
 
-include ':module-admin-kanban'
-project(':module-admin-kanban').projectDir = "E:\\Trabajos\\Projects\\GIT Projects Gradle\\module-admin-kanban" as File
+include ':module-gestion-contabilidad_empresarial-client'
+project(':module-gestion-contabilidad_empresarial-client').projectDir = "E:\\Trabajos\\Projects\\GIT Projects Gradle\\module-gestion-contabilidad_empresarial-client" as File
 
-include ':module-gestion-gastos_administrativos'
-project(':module-gestion-gastos_administrativos').projectDir = "E:\\Trabajos\\Projects\\GIT Projects Gradle\\module-gestion-gastos_administrativos" as File
-
-include ':module-gestion-nomina'
-project(':module-gestion-nomina').projectDir = "E:\\Trabajos\\Projects\\GIT Projects Gradle\\module-gestion-nomina" as File
+include ':module-gestion-contabilidad_empresarial-standard'
+project(':module-gestion-contabilidad_empresarial-standard').projectDir = "E:\\Trabajos\\Projects\\GIT Projects Gradle\\module-gestion-contabilidad_empresarial-standard" as File
 
 include ':module-util-bug'
 project(':module-util-bug').projectDir = "E:\\Trabajos\\Projects\\GIT Projects Gradle\\module-util-bug" as File
