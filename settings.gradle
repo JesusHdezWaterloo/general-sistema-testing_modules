@@ -71,3 +71,6 @@ project(':module-util-console').projectDir = "E:\\Trabajos\\Projects\\GIT Projec
 
 include ':module-util-tec'
 project(':module-util-tec').projectDir = "E:\\Trabajos\\Projects\\GIT Projects Gradle\\module-util-tec" as File
+
+include ':module-util-rest_config'
+project(':module-util-rest_config').projectDir = "E:\\Trabajos\\Projects\\GIT Projects Gradle\\module-util-rest_config" as File

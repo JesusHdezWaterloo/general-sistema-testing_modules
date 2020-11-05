@@ -58,6 +58,7 @@ dependencies {
     implementation project(':module-util-company')
     implementation project(':module-util-console')
     implementation project(':module-util-tec')
+    implementation project(':module-util-rest_config')
     
     compile group: 'mysql', name: 'mysql-connector-java', version: '8.0.17'
     
