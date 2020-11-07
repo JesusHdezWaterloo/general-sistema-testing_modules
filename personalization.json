@@ -34,7 +34,7 @@
     "a" : "255"
   },
   "swing_personalization.key.boolean.hide_to_system_tray" : true,
-  "swing_personalization.key.boolean.use_double_delete_check" : true,
+  "swing_personalization.key.boolean.use_double_delete_check" : false,
   "swing_personalization.key.color.secundary" : {
     "r" : "13",
     "g" : "71",
