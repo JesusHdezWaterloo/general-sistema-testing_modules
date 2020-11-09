@@ -53,6 +53,9 @@ dependencies {
     implementation project(':module-gestion-contabilidad_empresarial-client')    
     implementation project(':module-gestion-contabilidad_empresarial-standard')
     
+    implementation project(':module-gestion-gastos_administrativos-client')    
+    implementation project(':module-gestion-gastos_administrativos-standard')
+    
     implementation project(':module-util-bug')
     implementation project(':module-util-calc')
     implementation project(':module-util-company')

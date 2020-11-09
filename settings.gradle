@@ -51,12 +51,6 @@ project(':utils-files').projectDir = "E:\\Trabajos\\Projects\\GIT Projects Gradl
 include ':utils-spring'
 project(':utils-spring').projectDir = "E:\\Trabajos\\Projects\\GIT Projects Gradle\\utils-spring" as File
 
-include ':module-gestion-contabilidad_empresarial-client'
-project(':module-gestion-contabilidad_empresarial-client').projectDir = "E:\\Trabajos\\Projects\\GIT Projects Gradle\\module-gestion-contabilidad_empresarial-client" as File
-
-include ':module-gestion-contabilidad_empresarial-standard'
-project(':module-gestion-contabilidad_empresarial-standard').projectDir = "E:\\Trabajos\\Projects\\GIT Projects Gradle\\module-gestion-contabilidad_empresarial-standard" as File
-
 include ':module-util-bug'
 project(':module-util-bug').projectDir = "E:\\Trabajos\\Projects\\GIT Projects Gradle\\module-util-bug" as File
 
@@ -74,3 +68,17 @@ project(':module-util-tec').projectDir = "E:\\Trabajos\\Projects\\GIT Projects G
 
 include ':module-util-rest_config'
 project(':module-util-rest_config').projectDir = "E:\\Trabajos\\Projects\\GIT Projects Gradle\\module-util-rest_config" as File
+
+
+include ':module-gestion-contabilidad_empresarial-client'
+project(':module-gestion-contabilidad_empresarial-client').projectDir = "E:\\Trabajos\\Projects\\GIT Projects Gradle\\module-gestion-contabilidad_empresarial-client" as File
+
+include ':module-gestion-contabilidad_empresarial-standard'
+project(':module-gestion-contabilidad_empresarial-standard').projectDir = "E:\\Trabajos\\Projects\\GIT Projects Gradle\\module-gestion-contabilidad_empresarial-standard" as File
+
+
+include ':module-gestion-gastos_administrativos-client'
+project(':module-gestion-gastos_administrativos-client').projectDir = "E:\\Trabajos\\Projects\\GIT Projects Gradle\\module-gestion-gastos_administrativos-client" as File
+
+include ':module-gestion-gastos_administrativos-standard'
+project(':module-gestion-gastos_administrativos-standard').projectDir = "E:\\Trabajos\\Projects\\GIT Projects Gradle\\module-gestion-gastos_administrativos-standard" as File
