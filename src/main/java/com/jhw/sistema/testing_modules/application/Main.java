@@ -1,5 +1,6 @@
 package com.jhw.sistema.testing_modules.application;
 
+import com.jhw.module.admin.kanban.ui.module.KanbanSwingModule;
 import com.jhw.module.util.company.ui.module.CompanySwingModule;
 import com.jhw.module.gestion.contabilidad.ui.module.ContabilidadSwingModule;
 import com.jhw.module.gestion.gastos.ui.module.GastoSwingModule;
@@ -45,7 +46,8 @@ public class Main {
                         CompanySwingModule.init(),
                                                 
                         ContabilidadSwingModule.init(),
-                        GastoSwingModule.init()
+                        GastoSwingModule.init(),
+                        KanbanSwingModule.init()
                         
                 );
                 return null;
