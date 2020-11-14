@@ -69,6 +69,8 @@ project(':module-util-tec').projectDir = "E:\\Trabajos\\Projects\\GIT Projects G
 include ':module-util-rest_config'
 project(':module-util-rest_config').projectDir = "E:\\Trabajos\\Projects\\GIT Projects Gradle\\module-util-rest_config" as File
 
+include ':module-util-local_server'
+project(':module-util-local_server').projectDir = "E:\\Trabajos\\Projects\\GIT Projects Gradle\\module-util-local_server" as File
 
 include ':module-gestion-contabilidad_empresarial-client'
 project(':module-gestion-contabilidad_empresarial-client').projectDir = "E:\\Trabajos\\Projects\\GIT Projects Gradle\\module-gestion-contabilidad_empresarial-client" as File
