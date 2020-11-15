@@ -14,6 +14,7 @@ import javax.swing.JOptionPane;
 import com.jhw.module.util.default_config.DefaultConfigSwingModule;
 import com.jhw.module.util.licence.ui.module.LicenceSwingModule;
 import com.jhw.module.util.local_server.ui.module.LocalServerSwingModule;
+import com.jhw.module.util.rest_config.ui.module.RestConfigSwingModule;
 
 /**
  *
@@ -43,6 +44,7 @@ public class Main {
                         TecSwingModule.init(),
                         LicenceSwingModule.init(),
                         CompanySwingModule.init(),
+                        RestConfigSwingModule.init(),
                         LocalServerSwingModule.init(),
                         
                         ContabilidadSwingModule.init(),
