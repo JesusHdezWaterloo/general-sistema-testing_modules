@@ -7,6 +7,8 @@ plugins {
 
 group = 'com.jhw.sistema'
 
+version = '1.2.0.SNAPSHOT.20201114'
+
 mainClassName = 'com.jhw.sistema.testing_modules.application.Main'
 
 
@@ -48,17 +50,24 @@ dependencies {
     
     implementation project(':utils-export')
     implementation project(':utils-files')
+    implementation project(':utils-spring')
     
-    implementation project(':module-gestion-contabilidad_empresarial')
-    implementation project(':module-admin-kanban')
-    implementation project(':module-gestion-gastos_administrativos')
-    implementation project(':module-gestion-nomina')
+    implementation project(':module-gestion-contabilidad_empresarial-client')    
+    implementation project(':module-gestion-contabilidad_empresarial-standard')
+    
+    implementation project(':module-gestion-gastos_administrativos-client')    
+    implementation project(':module-gestion-gastos_administrativos-standard')
+    
+    implementation project(':module-admin-kanban-client')    
+    implementation project(':module-admin-kanban-standard')
     
     implementation project(':module-util-bug')
     implementation project(':module-util-calc')
     implementation project(':module-util-company')
     implementation project(':module-util-console')
     implementation project(':module-util-tec')
+    implementation project(':module-util-rest_config')
+    implementation project(':module-util-local_server')
     
     compile group: 'mysql', name: 'mysql-connector-java', version: '8.0.17'
     
@@ -80,20 +89,3 @@ launch4j {
     icon = "${projectDir}/src/main/resources/icon.ico" //ponerlo de ultimo
 }
 
-task deploy(type: Copy){
-    def deployFolder = "${projectDir}/!deploy"
-    doFirst{
-        delete deployFolder
-    }
-    from "${projectDir}/build/launch4j"//carpeta del launch4j
-    into deployFolder
-}
-task copyJRE(type: Copy){
-    def deployFolder = "${projectDir}/!deploy"
-    def jre_home = "${projectDir}/jre"
-    from jre_home
-    into deployFolder + "/" + launch4j.getAt("bundledJrePath")
-}
-createExe.finalizedBy(deploy)
-deploy.finalizedBy(copyJRE)
-//build.finalizedBy(createExe)

@@ -12,7 +12,7 @@ import java.net.MalformedURLException;
  */
 public class ResourceServiceImplementation implements ResourceService {
 
-    public static final String RESOURCE_URL = "msg/clean_example";
+    public static final String RESOURCE_URL = "application";
 
     private final DefaultResourceBundleService resourceService;
 
@@ -24,7 +24,7 @@ public class ResourceServiceImplementation implements ResourceService {
 
     private ResourceServiceImplementation() throws MalformedURLException {
         resourceService = new DefaultResourceBundleService(
-                ResourceBundleUtils.fromExternalFile(RESOURCE_URL,
+                ResourceBundleUtils.fromInternalFile(RESOURCE_URL,
                         ResourceBundleUtils.SPANISH));
     }
 
