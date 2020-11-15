@@ -1,0 +1,13 @@
+{
+  "list" : [ {
+    "ip" : "localhost",
+    "portRest" : "8080",
+    "portApache" : "7780",
+    "name" : "local",
+    "contextPath" : "",
+    "description" : "develop rest server"
+  } ],
+  "actualConfig" : 0,
+  "connectTimeOutMillis" : 3000,
+  "readTimeOutMillis" : 3000
+}
