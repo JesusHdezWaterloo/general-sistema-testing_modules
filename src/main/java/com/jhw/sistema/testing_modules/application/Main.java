@@ -36,7 +36,7 @@ public class Main {
             @Override
             public Void process() throws Exception {
                 app.run();
-                app.registerModule(LocalServerSwingModule.init(),
+                app.registerModule(
                         DefaultConfigSwingModule.init(),
                         BugSwingModule.init(),
                         CalcSwingModule.init(),
