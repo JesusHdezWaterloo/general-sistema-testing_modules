@@ -10,7 +10,6 @@ import com.jhw.sistema.testing_modules.application.services.ExceptionServiceImpl
 import com.jhw.sistema.testing_modules.application.services.NavigationServiceImplementation;
 import com.jhw.sistema.testing_modules.application.services.NotificationServiceImplementation;
 import com.jhw.sistema.testing_modules.application.services.ResourceServiceImplementation;
-import com.jhw.sistema.testing_modules.application.services.LoginServiceImplementation;
 import com.jhw.module.util.licence.services.LicenceHandler;
 import com.jhw.module.util.personalization.services.PersonalizationHandler;
 import com.jhw.swing.models.utils.PersonalizationModel;
@@ -39,7 +38,6 @@ public class SwingApplication extends DefaultSwingApplication {
         NotificationServiceImplementation.init();
         NavigationServiceImplementation.init();
         ResourceServiceImplementation.init();
-        LoginServiceImplementation.init();
 
         //creada la carpeta al iniciar el sistema para que al final cuando se cierre no de error xq no existe
         new File(PersonalizationHandler.getString(PersonalizationFiles.KEY_TEMP_FOLDER)).mkdirs();
