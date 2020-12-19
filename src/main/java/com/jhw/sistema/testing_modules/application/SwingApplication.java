@@ -12,12 +12,8 @@ import com.jhw.sistema.testing_modules.application.services.NotificationServiceI
 import com.jhw.sistema.testing_modules.application.services.ResourceServiceImplementation;
 import com.jhw.module.util.licence.services.LicenceHandler;
 import com.jhw.module.util.personalization.services.PersonalizationHandler;
-import com.jhw.swing.models.utils.PersonalizationModel;
 import com.jhw.swing.ui.MaterialLookAndFeel;
 import java.io.File;
-import java.io.IOException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.UIManager;
 
 /**

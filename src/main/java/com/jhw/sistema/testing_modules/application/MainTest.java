@@ -1,5 +1,8 @@
 package com.jhw.sistema.testing_modules.application;
 
+import java.util.Arrays;
+import java.util.List;
+
 /**
  *
  * @author Jesus Hernandez Barrios (jhernandezb96@gmail.com)
@@ -7,11 +10,10 @@ package com.jhw.sistema.testing_modules.application;
 public class MainTest {
 
     public static void main(String args[]) throws Exception {
-        String str = "asdasd\nasdasd\n235234\n54646546asd";
-        System.out.println(str);
+        List<Integer> list = Arrays.asList(1, 2, 3, 4, 5, 6);
+        int pos = 2;
 
-        String format = "<html>" + str.replace("\n", "<br>") + "</html>";
-        System.out.println(format);
+        System.out.println(list.get(pos));
     }
 
 }

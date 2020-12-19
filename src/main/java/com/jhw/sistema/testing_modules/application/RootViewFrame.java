@@ -18,12 +18,6 @@ public class RootViewFrame extends DefaultRootView {
         super(listener);
         startLogin();
         startDashboard();
-
-        if (false) {//TODO
-            navigateTo(LOGIN_NAME);
-        } else {
-            navigateTo(DASH_NAME);
-        }
     }
 
     private void startLogin() {
