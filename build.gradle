@@ -7,7 +7,7 @@ plugins {
 
 group = 'com.jhw.sistema'
 
-version = '1.2.0.SNAPSHOT.20201114'
+version = '2.0.0.SNAPSHOT.20201219'
 
 mainClassName = 'com.jhw.sistema.testing_modules.application.Main'
 
@@ -67,6 +67,7 @@ dependencies {
     implementation project(':module-util-console')
     implementation project(':module-util-tec')
     implementation project(':module-util-rest_config')
+    implementation project(':module-util-authentication_manager')
     implementation project(':module-util-local_server')
     
     compile group: 'mysql', name: 'mysql-connector-java', version: '8.0.17'

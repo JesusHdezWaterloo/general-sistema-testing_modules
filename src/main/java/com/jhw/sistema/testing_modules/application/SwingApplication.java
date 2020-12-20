@@ -10,15 +10,12 @@ import com.jhw.sistema.testing_modules.application.services.ExceptionServiceImpl
 import com.jhw.sistema.testing_modules.application.services.NavigationServiceImplementation;
 import com.jhw.sistema.testing_modules.application.services.NotificationServiceImplementation;
 import com.jhw.sistema.testing_modules.application.services.ResourceServiceImplementation;
-import com.jhw.sistema.testing_modules.application.services.LoginServiceImplementation;
 import com.jhw.module.util.licence.services.LicenceHandler;
+import com.jhw.module.util.personalization.core.domain.Personalization;
 import com.jhw.module.util.personalization.services.PersonalizationHandler;
-import com.jhw.swing.models.utils.PersonalizationModel;
+import com.jhw.swing.bundles.tray.SystemTrayInstaller;
 import com.jhw.swing.ui.MaterialLookAndFeel;
 import java.io.File;
-import java.io.IOException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.UIManager;
 
 /**
@@ -39,7 +36,6 @@ public class SwingApplication extends DefaultSwingApplication {
         NotificationServiceImplementation.init();
         NavigationServiceImplementation.init();
         ResourceServiceImplementation.init();
-        LoginServiceImplementation.init();
 
         //creada la carpeta al iniciar el sistema para que al final cuando se cierre no de error xq no existe
         new File(PersonalizationHandler.getString(PersonalizationFiles.KEY_TEMP_FOLDER)).mkdirs();
@@ -51,6 +47,16 @@ public class SwingApplication extends DefaultSwingApplication {
             super.navigateTo(string, o);
         } else {
             super.navigateTo(LOGIN_NAME);
+        }
+    }
+
+    @Override
+    public void show() {
+        super.show();
+
+        //aqui, despues que se instalaron los modulos para que coja el icon
+        if (PersonalizationHandler.getBoolean(Personalization.KEY_HIDE_TO_SYSTEM_TRAY)) {
+            SystemTrayInstaller.builder(rootView()).build();
         }
     }
 
