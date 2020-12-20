@@ -1,5 +1,6 @@
 package com.jhw.sistema.testing_modules.application;
 
+import com.clean.core.app.services.AuthenticationHandler;
 import com.jhw.module.admin.kanban.ui.module.KanbanSwingModule;
 import com.jhw.module.util.company.ui.module.CompanySwingModule;
 import com.jhw.module.gestion.contabilidad.ui.module.ContabilidadSwingModule;
@@ -15,6 +16,7 @@ import com.jhw.module.util.default_config.DefaultConfigSwingModule;
 import com.jhw.module.util.licence.ui.module.LicenceSwingModule;
 import com.jhw.module.util.local_server.ui.module.LocalServerSwingModule;
 import com.jhw.module.util.rest_config.ui.module.RestConfigSwingModule;
+import com.jhw.module.util.authentication_manager.ui.module.AuthSwingModule;
 
 /**
  *
@@ -23,7 +25,6 @@ import com.jhw.module.util.rest_config.ui.module.RestConfigSwingModule;
 public class Main {
 
     public static final SwingApplication app = new SwingApplication();
-    public static User user;
 
     public static void main(String args[]) throws Exception {
         new LoadingWorker<Void>(new _PanelGradient()/*new SplashScreen() {
@@ -45,12 +46,16 @@ public class Main {
                         LicenceSwingModule.init(),
                         CompanySwingModule.init(),
                         RestConfigSwingModule.init(),
+                        AuthSwingModule.init(),
                         LocalServerSwingModule.init(),
+                        
                         
                         ContabilidadSwingModule.init(),
                         GastoSwingModule.init(),
                         KanbanSwingModule.init()
                 );
+                //AuthenticationHandler.login("admin", "admin");
+                //app.navigateTo("DASHBOARD");
                 return null;
             }
 
