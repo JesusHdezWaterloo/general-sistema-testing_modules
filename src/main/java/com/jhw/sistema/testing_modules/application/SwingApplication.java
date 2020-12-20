@@ -11,7 +11,9 @@ import com.jhw.sistema.testing_modules.application.services.NavigationServiceImp
 import com.jhw.sistema.testing_modules.application.services.NotificationServiceImplementation;
 import com.jhw.sistema.testing_modules.application.services.ResourceServiceImplementation;
 import com.jhw.module.util.licence.services.LicenceHandler;
+import com.jhw.module.util.personalization.core.domain.Personalization;
 import com.jhw.module.util.personalization.services.PersonalizationHandler;
+import com.jhw.swing.bundles.tray.SystemTrayInstaller;
 import com.jhw.swing.ui.MaterialLookAndFeel;
 import java.io.File;
 import javax.swing.UIManager;
@@ -45,6 +47,16 @@ public class SwingApplication extends DefaultSwingApplication {
             super.navigateTo(string, o);
         } else {
             super.navigateTo(LOGIN_NAME);
+        }
+    }
+
+    @Override
+    public void show() {
+        super.show();
+
+        //aqui, despues que se instalaron los modulos para que coja el icon
+        if (PersonalizationHandler.getBoolean(Personalization.KEY_HIDE_TO_SYSTEM_TRAY)) {
+            SystemTrayInstaller.builder(rootView()).build();
         }
     }
 
