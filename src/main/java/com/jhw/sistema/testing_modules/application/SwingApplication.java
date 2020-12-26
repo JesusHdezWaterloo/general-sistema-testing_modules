@@ -10,7 +10,7 @@ import com.jhw.sistema.testing_modules.application.services.ExceptionServiceImpl
 import com.jhw.sistema.testing_modules.application.services.NavigationServiceImplementation;
 import com.jhw.sistema.testing_modules.application.services.NotificationServiceImplementation;
 import com.jhw.sistema.testing_modules.application.services.ResourceServiceImplementation;
-import com.jhw.module.util.licence.services.LicenceHandler;
+//import com.jhw.module.util.licence.services.LicenceHandler;
 import com.jhw.module.util.personalization.core.domain.Personalization;
 import com.jhw.module.util.personalization.services.PersonalizationHandler;
 import com.jhw.swing.bundles.tray.SystemTrayInstaller;
@@ -43,11 +43,11 @@ public class SwingApplication extends DefaultSwingApplication {
 
     @Override
     public void navigateTo(String string, Object... o) {
-        if (LicenceHandler.isLicenceCorrect()) {
+        //if (LicenceHandler.isLicenceCorrect()) {
             super.navigateTo(string, o);
-        } else {
-            super.navigateTo(LOGIN_NAME);
-        }
+        //} else {
+        //    super.navigateTo(LOGIN_NAME);
+        //}
     }
 
     @Override

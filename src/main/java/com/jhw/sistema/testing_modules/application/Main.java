@@ -3,8 +3,8 @@ package com.jhw.sistema.testing_modules.application;
 import com.jhw.module.admin.kanban.ui.module.KanbanSwingModule;
 import com.jhw.module.admin.seguridad.ui.module.SeguridadSwingModule;
 import com.jhw.module.util.company.ui.module.CompanySwingModule;
-import com.jhw.module.gestion.contabilidad.ui.module.ContabilidadSwingModule;
-import com.jhw.module.gestion.gastos.ui.module.GastoSwingModule;
+//import com.jhw.module.gestion.contabilidad.ui.module.ContabilidadSwingModule;
+//import com.jhw.module.gestion.gastos.ui.module.GastoSwingModule;
 import com.jhw.module.util.tec.TecSwingModule;
 import com.jhw.swing.bundles.loading.LoadingProcess;
 import com.jhw.swing.bundles.loading.LoadingWorker;
@@ -50,8 +50,8 @@ public class Main {
                         LocalServerSwingModule.init(),
                         
                         
-                        ContabilidadSwingModule.init(),
-                        GastoSwingModule.init(),
+                        //ContabilidadSwingModule.init(),
+                        //GastoSwingModule.init(),
                         KanbanSwingModule.init(),
                         SeguridadSwingModule.init()
                 );
