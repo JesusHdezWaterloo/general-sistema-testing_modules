@@ -61,6 +61,9 @@ dependencies {
     implementation project(':module-admin-kanban-client')    
     implementation project(':module-admin-kanban-standard')
     
+    implementation project(':module-admin-seguridad-client')    
+    implementation project(':module-admin-seguridad-standard')
+    
     implementation project(':module-util-bug')
     implementation project(':module-util-calc')
     implementation project(':module-util-company')

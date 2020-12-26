@@ -1,5 +1,7 @@
 package com.jhw.sistema.testing_modules.application;
 
+import java.awt.Desktop;
+import java.net.URI;
 import java.util.Arrays;
 import java.util.List;
 
@@ -10,10 +12,7 @@ import java.util.List;
 public class MainTest {
 
     public static void main(String args[]) throws Exception {
-        List<Integer> list = Arrays.asList(1, 2, 3, 4, 5, 6);
-        int pos = 2;
-
-        System.out.println(list.get(pos));
+        Desktop.getDesktop().mail(new URI("mailto:email@example.com?subject=bajajaja&attachment=/settings.gradle"));
     }
 
 }
