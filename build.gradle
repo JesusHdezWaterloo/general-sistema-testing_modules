@@ -45,7 +45,6 @@ dependencies {
     
     implementation project(':module-util-personalization')
     implementation project(':module-util-default_configuration')
-    implementation project(':module-util-licence')
     implementation project(':module-util-mysql')
     
     implementation project(':utils-export')
@@ -63,6 +62,9 @@ dependencies {
     
     implementation project(':module-admin-seguridad-client')    
     implementation project(':module-admin-seguridad-standard')
+    
+    implementation project(':module-util-licence-client')    
+    implementation project(':module-util-licence-standard')
     
     implementation project(':module-util-bug')
     implementation project(':module-util-calc')
