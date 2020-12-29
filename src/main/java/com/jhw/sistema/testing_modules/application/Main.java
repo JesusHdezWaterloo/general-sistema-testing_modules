@@ -1,7 +1,7 @@
 package com.jhw.sistema.testing_modules.application;
 
-import com.clean.core.app.services.AuthenticationHandler;
 import com.jhw.module.admin.kanban.ui.module.KanbanSwingModule;
+import com.jhw.module.admin.seguridad.ui.module.SeguridadSwingModule;
 import com.jhw.module.util.company.ui.module.CompanySwingModule;
 import com.jhw.module.gestion.contabilidad.ui.module.ContabilidadSwingModule;
 import com.jhw.module.gestion.gastos.ui.module.GastoSwingModule;
@@ -52,7 +52,8 @@ public class Main {
                         
                         ContabilidadSwingModule.init(),
                         GastoSwingModule.init(),
-                        KanbanSwingModule.init()
+                        KanbanSwingModule.init(),
+                        SeguridadSwingModule.init()
                 );
                 //AuthenticationHandler.login("admin", "admin");
                 //app.navigateTo("DASHBOARD");
