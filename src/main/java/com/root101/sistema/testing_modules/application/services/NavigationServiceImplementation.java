@@ -1,8 +1,8 @@
-package com.jhw.sistema.testing_modules.application.services;
+package com.root101.sistema.testing_modules.application.services;
 
-import com.clean.core.app.services.Navigation;
-import com.clean.core.app.services.NavigationService;
-import static com.jhw.sistema.testing_modules.application.Main.app;
+import com.root101.clean.core.app.services.NavigationHandler;
+import com.root101.clean.core.app.services.NavigationService;
+import static com.root101.sistema.testing_modules.application.Main.app;
 
 /**
  *
@@ -12,7 +12,7 @@ public class NavigationServiceImplementation implements NavigationService {
 
     public static NavigationServiceImplementation init() {
         NavigationServiceImplementation nav = new NavigationServiceImplementation();
-        Navigation.registerNavigationService(nav);
+        NavigationHandler.registerNavigationService(nav);
         return nav;
     }
 

@@ -1,4 +1,4 @@
-package com.jhw.sistema.testing_modules.application.dashboard;
+package com.root101.sistema.testing_modules.application.dashboard;
 
 import com.jhw.module.util.personalization.core.domain.Personalization;
 import com.jhw.module.util.personalization.services.PersonalizationHandler;
