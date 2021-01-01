@@ -1,14 +1,30 @@
-package com.jhw.sistema.testing_modules.application;
+/*
+ * Copyright 2021 Root101 (jhernandezb96@gmail.com, +53-5-426-8660).
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Or read it directly from LICENCE.txt file at the root of this project.
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+package com.root101.sistema.testing_modules.application;
 
-import com.clean.core.app.services.Notification;
-import com.clean.core.app.services.NotificationsGeneralType;
-import com.clean.swing.app.DefaultSwingApplication;
+import com.root101.clean.core.app.services.NotificationHandler;
+import com.root101.clean.core.app.services.NotificationsGeneralType;
+import com.root101.clean.swing.app.DefaultSwingApplication;
 import com.jhw.utils.file.FILE;
 import com.jhw.utils.file.PersonalizationFiles;
-import com.jhw.sistema.testing_modules.application.services.ExceptionServiceImplementation;
-import com.jhw.sistema.testing_modules.application.services.NavigationServiceImplementation;
-import com.jhw.sistema.testing_modules.application.services.NotificationServiceImplementation;
-import com.jhw.sistema.testing_modules.application.services.ResourceServiceImplementation;
+import com.root101.sistema.testing_modules.application.services.ExceptionServiceImplementation;
+import com.root101.sistema.testing_modules.application.services.NavigationServiceImplementation;
+import com.root101.sistema.testing_modules.application.services.NotificationServiceImplementation;
+import com.root101.sistema.testing_modules.application.services.ResourceServiceImplementation;
 import com.jhw.module.util.personalization.core.domain.Personalization;
 import com.jhw.module.util.personalization.services.PersonalizationHandler;
 import com.jhw.swing.bundles.tray.SystemTrayInstaller;
@@ -18,7 +34,8 @@ import javax.swing.UIManager;
 
 /**
  *
- * @author Jesus Hernandez Barrios (jhernandezb96@gmail.com)
+ * @author Root101 (jhernandezb96@gmail.com, +53-5-426-8660)
+ * @author JesusHdezWaterloo@Github
  */
 public class SwingApplication extends DefaultSwingApplication {
 
@@ -58,7 +75,7 @@ public class SwingApplication extends DefaultSwingApplication {
             }
         } catch (Exception ex) {
         }
-        Notification.showConfirmDialog(NotificationsGeneralType.CONFIRM_ERROR, "Error eliminando la carpeta temporal. Esto NO afecta el sistema,\npero con el tiempo puede que ocupe mucho espacio innecesariamente.");
+        NotificationHandler.showConfirmDialog(NotificationsGeneralType.CONFIRM_ERROR, "Error eliminando la carpeta temporal. Esto NO afecta el sistema,\npero con el tiempo puede que ocupe mucho espacio innecesariamente.");
     }
 
 }

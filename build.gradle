@@ -5,11 +5,11 @@ plugins {
     id 'application'
 }
 
-group = 'com.jhw.sistema'
+group = 'com.root101.sistema'
 
-version = '2.1.0.SNAPSHOT.20201228'
+version = '2.9.9.SNAPSHOT.20210101'
 
-mainClassName = 'com.jhw.sistema.testing_modules.application.Main'
+mainClassName = 'com.root101.sistema.testing_modules.application.Main'
 
 
 repositories {
@@ -31,7 +31,7 @@ dependencies {
 
     implementation project(':utils-core')
     
-    implementation project(':clean-core-full')
+    implementation project(':clean-core')
     implementation project(':clean-swing')
     
     implementation project(':swing-derivable_icons')
@@ -63,8 +63,8 @@ dependencies {
     implementation project(':module-admin-seguridad-client')    
     implementation project(':module-admin-seguridad-standard')
     
-    implementation project(':module-util-licence-client')    
-    implementation project(':module-util-licence-standard')
+    implementation project(':module-control-licence-client')    
+    implementation project(':module-control-licence-standard')
     
     implementation project(':module-util-bug')
     implementation project(':module-util-calc')
