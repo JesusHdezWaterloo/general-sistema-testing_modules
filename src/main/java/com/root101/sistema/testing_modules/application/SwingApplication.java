@@ -27,8 +27,8 @@ import com.root101.sistema.testing_modules.application.services.NotificationServ
 import com.root101.sistema.testing_modules.application.services.ResourceServiceImplementation;
 import com.jhw.module.util.personalization.core.domain.Personalization;
 import com.jhw.module.util.personalization.services.PersonalizationHandler;
-import com.jhw.swing.bundles.tray.SystemTrayInstaller;
-import com.jhw.swing.ui.MaterialLookAndFeel;
+import com.root101.swing.bundles.tray.SystemTrayInstaller;
+import com.root101.swing.ui.MaterialLookAndFeel;
 import java.io.File;
 import javax.swing.UIManager;
 
