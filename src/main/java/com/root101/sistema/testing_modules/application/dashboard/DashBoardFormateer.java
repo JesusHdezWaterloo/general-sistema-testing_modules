@@ -16,8 +16,8 @@
  */
 package com.root101.sistema.testing_modules.application.dashboard;
 
-import com.jhw.module.util.personalization.core.domain.Personalization;
-import com.jhw.module.util.personalization.services.PersonalizationHandler;
+import com.root101.module.util.personalization.core.domain.Personalization;
+import com.root101.module.util.personalization.services.PersonalizationHandler;
 import com.root101.swing.material.components.container.panel._PanelGradient;
 import com.root101.swing.material.components.dashboard.taskpane.expanded.DashBoardExtends;
 import com.root101.swing.material.components.dashboard.taskpane.expanded.DownPanel;
