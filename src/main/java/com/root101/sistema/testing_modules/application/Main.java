@@ -17,19 +17,19 @@
 package com.root101.sistema.testing_modules.application;
 
 import com.root101.module.admin.seguridad.ui.module.SeguridadSwingModule;
-import com.jhw.module.util.company.ui.module.CompanySwingModule;
-import com.jhw.module.util.tec.TecSwingModule;
-import com.jhw.swing.bundles.loading.LoadingProcess;
-import com.jhw.swing.bundles.loading.LoadingWorker;
-import com.jhw.module.util.bug.module.BugSwingModule;
-import com.jhw.module.util.calc.CalcSwingModule;
-import com.jhw.swing.material.components.container.panel._PanelGradient;
+import com.root101.module.util.company.ui.module.CompanySwingModule;
+import com.root101.module.util.tec.TecSwingModule;
+import com.root101.swing.bundles.loading.LoadingProcess;
+import com.root101.swing.bundles.loading.LoadingWorker;
+import com.root101.module.util.bug.module.BugSwingModule;
+import com.root101.module.util.calc.CalcSwingModule;
+import com.root101.swing.material.components.container.panel._PanelGradient;
 import javax.swing.JOptionPane;
-import com.jhw.module.util.default_config.DefaultConfigSwingModule;
+import com.root101.module.util.default_config.DefaultConfigSwingModule;
 import com.root101.module.control.licence.ui.module.LicenceSwingModule;
-import com.jhw.module.util.local_server.ui.module.LocalServerSwingModule;
-import com.jhw.module.util.rest_config.ui.module.RestConfigSwingModule;
-import com.jhw.module.util.authentication_manager.ui.module.AuthSwingModule;
+import com.root101.module.util.local_server.ui.module.LocalServerSwingModule;
+import com.root101.module.util.rest_config.ui.module.RestConfigSwingModule;
+import com.root101.module.util.authentication_manager.ui.module.AuthSwingModule;
 import com.root101.module.admin.kanban.ui.module.KanbanSwingModule;
 import com.root101.module.gestion.contabilidad.ui.module.ContabilidadSwingModule;
 import com.root101.module.gestion.gastos.ui.module.GastoSwingModule;
@@ -65,8 +65,6 @@ public class Main {
                         RestConfigSwingModule.init(),
                         AuthSwingModule.init(),
                         LocalServerSwingModule.init(),
-                        
-                        
                         ContabilidadSwingModule.init(),
                         GastoSwingModule.init(),
                         KanbanSwingModule.init(),
